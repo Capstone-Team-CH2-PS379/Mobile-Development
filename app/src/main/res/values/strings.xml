@@ -4,4 +4,25 @@
     <string name="menu_ngobrol">Ngobrol</string>
     <string name="menu_leaderboard">Leaderboard</string>
     <string name="menu_profile">Profile</string>
+    <string name="welcome">Welcome!</string>
+    <string name="intro_message">Apps Learning Lengauage</string>
+    <string name="go_to_sign_in">Go To Sign In</string>
+    <string name="no_account_yet_msg">No account yet? Sign Up</string>
+    <string name="logo_app">Logo App Welcome</string>
+    <string name="back_button">Back Button</string>
+    <string name="register">Register</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="email_addres">Email Address</string>
+    <string name="sample_email">example@gmail.com</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="first_name">John</string>
+    <string name="last_name">Doe</string>
+    <string name="password">Password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="last_name_label">Last Name</string>
+    <string name="first_name_label">First Name</string>
+    <string name="login">Login</string>
+
+
 </resources>
