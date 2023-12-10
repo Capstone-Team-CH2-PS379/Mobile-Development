@@ -75,7 +75,7 @@ fun DefaultPreview() {
             ) {
                 Column {
                     Text(text = buildAnnotatedString {
-                        append("Choose what\n")
+                        append("Choose what\n\n")
                         withStyle(
                             style = SpanStyle(
                                 fontWeight = FontWeight.Bold,
@@ -97,7 +97,6 @@ fun DefaultPreview() {
 
                     Box(
                         modifier = Modifier
-                            .padding(end = 20.dp)
                             .clip(shape = RoundedCornerShape(10))
                             .background(color = colorResource(id = R.color.purple_200))
                     ) {
@@ -242,7 +241,7 @@ fun Recommended() {
 
             Column(
                 verticalArrangement = Arrangement.SpaceBetween,
-                horizontalAlignment = Alignment.CenterHorizontally,
+//                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
                     text = "Chatting",
