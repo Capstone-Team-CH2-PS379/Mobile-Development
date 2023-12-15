@@ -1,4 +1,4 @@
-package com.capstone.fluentin.ui.user.signup
+package com.capstone.fluentin.ui.screen.user.login
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,16 +29,16 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.capstone.fluentin.R
 import com.capstone.fluentin.ui.components.CustomTextField
 import com.capstone.fluentin.ui.theme.FluentInTheme
 
 @Composable
-fun SignUpScreen() {
-    var firstName by remember { mutableStateOf("") }
-    var lastName by remember { mutableStateOf("") }
+fun LoginScreen(navController: NavController){
     var email by remember { mutableStateOf("") }
-    var pass by remember{ mutableStateOf("")}
+    var pass by remember{ mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
 
     Column(
@@ -49,64 +49,27 @@ fun SignUpScreen() {
         verticalArrangement = Arrangement.spacedBy(20.dp),
         horizontalAlignment = Alignment.Start
     ) {
-        IconButton(onClick = { /*TODO*/ }, modifier = Modifier.align(Alignment.Start)) {
+        IconButton(onClick = { /*TODO*/
+            navController.navigate("welcome")
+                             },
+            modifier = Modifier
+                .align(Alignment.Start)
+        ) {
             Icon(
                 imageVector = Icons.Filled.ArrowBack,
                 contentDescription = stringResource(R.string.back_button)
             )
         }
+
         Text(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 8.dp)
                 .align(Alignment.CenterHorizontally),
-            text = stringResource(R.string.register),
+            text = stringResource(R.string.login),
             fontSize = 35.sp,
             fontWeight = FontWeight.Bold
         )
-
-        // First Name and Last Name Row
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 8.dp)
-        ) {
-            // First Name
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 8.dp)
-            ) {
-                Text(
-                    text = stringResource(R.string.first_name_label),
-                    fontWeight = FontWeight.Bold
-                )
-                CustomTextField(
-                    value = firstName,
-                    onValueChange = { newText ->
-                        firstName = newText
-                    },
-                    placeholder = stringResource(R.string.first_name)
-                )
-            }
-
-            // Last Name
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-            ) {
-                Text(
-                    text = stringResource(R.string.last_name_label),
-                    fontWeight = FontWeight.Bold
-                )
-                CustomTextField(
-                    value = lastName,
-                    onValueChange ={newText ->
-                        lastName = newText} ,
-                    placeholder = stringResource(R.string.last_name)
-                )
-            }
-        }
 
         Row(
             modifier = Modifier
@@ -130,10 +93,9 @@ fun SignUpScreen() {
                     placeholder = stringResource(R.string.sample_email),
                     keyboardType = KeyboardType.Email,
 
-                )
+                    )
             }
         }
-
         Row {
             // Password
             Column(
@@ -166,14 +128,13 @@ fun SignUpScreen() {
                 )
             }
         }
-
         Button(
-            onClick = { /*TODO*/ },
+            onClick = {  navController.navigate("home")},
             Modifier
                 .fillMaxWidth()
                 .height(50.dp),
         ) {
-            Text(text = stringResource(R.string.sign_up))
+            Text(text = stringResource(R.string.login))
         }
     }
 }
@@ -182,6 +143,6 @@ fun SignUpScreen() {
 @Composable
 fun SignUpPreview() {
     FluentInTheme {
-        SignUpScreen()
+        LoginScreen(navController = rememberNavController() )
     }
 }

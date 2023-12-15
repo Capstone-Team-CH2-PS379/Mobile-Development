@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -47,7 +48,7 @@ fun FluentInApp(
             modifier = Modifier.padding(innerPadding)
         ){
             composable(Screen.Home.route){
-                HomeScreen()
+                HomeScreen(navController)
             }
             composable(Screen.Ngobrol.route){
                 NgobrolScreen()

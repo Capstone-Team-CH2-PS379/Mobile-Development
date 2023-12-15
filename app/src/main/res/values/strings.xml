@@ -23,6 +23,9 @@
     <string name="last_name_label">Last Name</string>
     <string name="first_name_label">First Name</string>
     <string name="login">Login</string>
+    <string name="confirm_pasword">Confirm Password</string>
+    <string name="ucapkan">Ucapkan Textnya</string>
+    <string name="password_min_length_error">Password Minimal 8 Character</string>
 
 
 </resources>

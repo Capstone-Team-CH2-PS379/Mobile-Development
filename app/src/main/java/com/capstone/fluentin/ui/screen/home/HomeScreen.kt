@@ -47,16 +47,14 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.capstone.fluentin.R
 import com.capstone.fluentin.ui.components.TextCenter
 import com.capstone.fluentin.ui.theme.FluentInTheme
 
 @Composable
-fun HomeScreen( modifier: Modifier = Modifier) {
-    TextCenter(
-        text = "Hello Home!",
-        modifier = modifier
-    )
+fun HomeScreen( navController: NavController) {
+    DefaultPreview()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -169,7 +167,7 @@ fun DefaultPreview() {
                         modifier = Modifier.padding(end = 20.dp),
                         verticalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
-                        items(2) {
+                        items(10) {
                             Recommended()
                         }
                     }

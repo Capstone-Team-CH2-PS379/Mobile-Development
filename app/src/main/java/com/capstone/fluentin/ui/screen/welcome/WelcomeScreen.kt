@@ -1,6 +1,7 @@
-package com.capstone.fluentin.ui.welcome
+package com.capstone.fluentin.ui.screen.welcome
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,12 +25,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.capstone.fluentin.R
 import com.capstone.fluentin.ui.screen.home.HomeScreen
 import com.capstone.fluentin.ui.theme.FluentInTheme
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize()
     ){
@@ -66,20 +68,25 @@ fun WelcomeScreen() {
             }
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = { /*TODO*/
+                              navController.navigate("login")
+                              },
                     Modifier
                         .fillMaxWidth()
                         .height(50.dp)
                         .absolutePadding(bottom = 5.dp),
                     colors = ButtonDefaults.buttonColors(
-//                        backgroundColor = Color(red = 255, green = 125, blue = 0),
+                        Color(202, 107, 229, 255),
+//                         backgroundColor = Color(255, 125, 0),
                         contentColor = Color.White
                     )
                 ) {
                     Text(text = stringResource(R.string.go_to_sign_in))
                 }
                 OutlinedButton(
-                    onClick = { /*TODO*/ },
+                    onClick = { /*TODO*/
+                              navController.navigate("signUp")
+                              },
                     Modifier
                         .fillMaxWidth()
                         .height(50.dp)
@@ -87,7 +94,7 @@ fun WelcomeScreen() {
                 ) {
                     Text(
                         text = stringResource(R.string.no_account_yet_msg),
-                        color = Color(red = 255, green = 126, blue = 0)
+                        color = Color(red = 202, green = 107, blue = 229, alpha = 255)
                     )
                 }
 
@@ -96,10 +103,10 @@ fun WelcomeScreen() {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun WelcomePreview() {
-    FluentInTheme {
-        WelcomeScreen()
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun WelcomePreview() {
+//    FluentInTheme {
+//        WelcomeScreen(navController)
+//    }
+//}
