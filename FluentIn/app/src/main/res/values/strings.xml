@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">FluentIn</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="data_kategori">
+        <item>School</item>
+        <item>Books</item>
+        <item>Market</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="data_conversations_room">
+        <item>English Express</item>
+        <item>Grammar Gurus Corner</item>
+        <item>Vocabolary Voyage</item>
+        <item>Writing Workshop</item>
+    </string-array>
+
+    <string-array name="data_conversations_deskripsi">
+        <item>Berlatih berbicara bahasa Inggris</item>
+        <item>Diskusi tentang tata bahasa</item>
+        <item>Jelajahi dunia kata-kata</item>
+        <item>Meningkatkan keterampilan menulis</item>
+    </string-array>
+
+
+    <integer-array name="data_bendera">
+        <item>@drawable/bendera_indo</item>
+        <item>@drawable/bendera_inggris</item>
+        <item>@drawable/bendera_spanyol</item>
+        <item>@drawable/bendera_mandarin</item>
+        <item>@drawable/bendera_jerman</item>
+    </integer-array>
+
+    <string-array name="data_name_negara">
+        <item>Indonesia</item>
+        <item>Inggris</item>
+        <item>Spanyol</item>
+        <item>Mandarin</item>
+        <item>Jerman</item>
+    </string-array>
+
+
+    <integer-array name="data_foto_channel">
+        <item>@drawable/img_channel_dua</item>
+        <item>@drawable/img_channel_satu</item>
+        <item>@drawable/img_channel_dua</item>
+        <item>@drawable/img_channel_tiga</item>
+        <item>@drawable/img_channel_satu</item>
+        <item>@drawable/img_channel_dua</item>
+        <item>@drawable/img_channel_satu</item>
+        <item>@drawable/img_channel_dua</item>
+        <item>@drawable/img_channel_tiga</item>
+        <item>@drawable/img_channel_satu</item>
+    </integer-array>
+
+
+    <string-array name="data_name_channel">
+        <item>LearnHub</item>
+        <item>StudyMaster</item>
+        <item>AcademicArena</item>
+        <item>KnowledgeHub</item>
+        <item>SmartStudyRoom</item>
+        <item>StudyCircle</item>
+        <item>BrainyClassroom</item>
+        <item>EducationJunction</item>
+        <item>IntellectSquare</item>
+        <item>WiseLearningSpace</item>
+    </string-array>
+
+
+</resources>

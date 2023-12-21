@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.podcast.PodcatsFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:id="@+id/tv_ngobrol_bareng"
+        android:text="Ngobrol Bareng"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_ngobrol_bareng"
+        android:layout_below="@id/tv_ngobrol_bareng"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:id="@+id/tv_name_channel"
+        android:layout_below="@id/rv_ngobrol_bareng"
+        android:layout_marginTop="16dp"
+        android:text="Name Channel"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/tv_name_channel"
+       android:layout_marginTop="8dp"
+       android:id="@+id/rv_name_channel"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_primary"
+        android:backgroundTint="@color/netral200"
+        android:layout_width="250dp"
+        android:layout_height="70dp">
+
+        <ImageButton
+            android:id="@+id/btn_sound"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/icon_sound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_mic"
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:background="@drawable/icon_mic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_sound"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/btn_telepon"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:background="@drawable/icon_telepon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_sound"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

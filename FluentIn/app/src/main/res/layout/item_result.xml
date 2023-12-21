@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_radius_15"
+        android:backgroundTint="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_close_24"
+            android:background="@color/white"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btn_close"/>
+
+        <TextView
+            android:id="@+id/tv_title_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_result"
+            android:layout_below="@id/tv_title_result"
+            android:layout_marginTop="16dp"
+            android:minHeight="100dp"
+            android:background="@drawable/bg_radius_15"
+            android:backgroundTint="@color/netral200"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bahasa Inggris"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:id="@+id/tv_result"/>
+
+
+        </LinearLayout>
+
+        <TextView
+
+            android:background="@drawable/button_primary"
+            android:padding="8dp"
+            android:layout_below="@id/layout_result"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/succes"
+            android:gravity="center"
+            android:text="Good"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_point"
+                android:id="@+id/icon_point"/>
+
+            <TextView
+                android:layout_marginStart="4dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/tv_point"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="+0"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

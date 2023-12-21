@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/icon_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/menu_ngobrol_bareng"
+        android:icon="@drawable/icon_podcast"
+        android:title="Ngobrol Bareng"/>
+
+    <item
+        android:id="@+id/menu_leaderboard"
+        android:icon="@drawable/icon_leaderboard"
+        android:title="Leaderboard"/>
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/icon_profile"
+        android:title="Profile"/>
+
+
+</menu>
