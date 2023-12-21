@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "FluentIn"
 include(":app")
+ 
