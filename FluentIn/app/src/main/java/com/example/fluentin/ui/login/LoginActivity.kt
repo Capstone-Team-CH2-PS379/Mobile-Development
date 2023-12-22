@@ -3,6 +3,7 @@ package com.example.fluentin.ui.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.fluentin.data.PreferenceDataSource
@@ -54,6 +55,7 @@ class LoginActivity : AppCompatActivity() {
                                         pref.saveAuthToken(it.loginResult.token)
                                         message(it.message)
                                         val userId = it.loginResult.userId
+                                        Log.d("DebugUserId", "User ID: $userId")
                                         UserSharedPreferences.saveUserId(this@LoginActivity, userId)
                                         intent =
                                             Intent(this@LoginActivity, MainActivity::class.java)

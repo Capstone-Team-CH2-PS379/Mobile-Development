@@ -40,7 +40,7 @@ class PronunciationActivity : AppCompatActivity() {
     private var idAudioNative: Int? = null
 
 
-    private val userSharedPreferences = UserSharedPreferences
+    private var userSharedPreferences = UserSharedPreferences
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -251,6 +251,7 @@ class PronunciationActivity : AppCompatActivity() {
 
     private fun savePoints(points: Int) {
         val userId = userSharedPreferences.getUserId(this)
+        Log.d("SavePoints", "User ID: $userId")
         val key = "user_points_$userId"
 
         val currentPoints = userSharedPreferences.getUserPoints(this, key)

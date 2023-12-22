@@ -16,14 +16,14 @@ data class LoginResponse(
 
 data class LoginResult(
 
-	@field:SerializedName("last_name")
-	val lastName: String,
-
-	@field:SerializedName("userId")
+	@field:SerializedName("user_id")
 	val userId: Int,
 
 	@field:SerializedName("first_name")
 	val firstName: String,
+
+	@field:SerializedName("last_name")
+	val lastName: String,
 
 	@field:SerializedName("email")
 	val email: String,
